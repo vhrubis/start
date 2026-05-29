@@ -3,18 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moje nová webová stránka</title>
+    <title>Zpěvník s akordy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Vítejte na mém webu!</h1>
+        <h1>Můj interaktivní zpěvník</h1>
+        <p>Najdi si text a akordy ke své oblíbené písni</p>
     </header>
+
     <main>
-        <p>Tento web byl vytvořen s pomocí AI asistenta Julese.</p>
+        <section class="search-container">
+            <input type="text" id="search" placeholder="Zadej název písně nebo umělce..." autocomplete="off">
+            <button id="search-btn">Hledat</button>
+            <div id="suggestions" class="suggestions-list"></div>
+        </section>
+
+        <section id="results" class="results-container">
+            <div id="loading" class="hidden">Hledám...</div>
+            <div id="song-info" class="hidden">
+                <h2 id="song-title"></h2>
+                <h3 id="song-artist"></h3>
+                <div id="chord-link-container"></div>
+                <pre id="lyrics"></pre>
+            </div>
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 Všechna práva vyhrazena.</p>
+        <p>&copy; 2024 Vytvořeno pomocí Jules AI</p>
     </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>

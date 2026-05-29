@@ -1,32 +1,135 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f2f5;
     color: #333;
 }
 
 header {
-    background: #35424a;
+    background: #2c3e50;
     color: #ffffff;
-    padding: 1rem;
+    padding: 2rem 1rem;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
 main {
     padding: 2rem;
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
-    background: #fff;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+#search {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#search:focus {
+    border-color: #3498db;
+}
+
+#search-btn {
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+#search-btn:hover {
+    background-color: #2980b9;
+}
+
+.suggestions-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 0 0 10px 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.suggestion-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover {
+    background-color: #f8f9fa;
+}
+
+.results-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    min-height: 200px;
+}
+
+#lyrics {
+    white-space: pre-wrap;
+    font-family: inherit;
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border-left: 4px solid #3498db;
+}
+
+#chord-link {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 10px 20px;
+    background-color: #e67e22;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#chord-link:hover {
+    background-color: #d35400;
+}
+
+.hidden {
+    display: none;
 }
 
 footer {
     text-align: center;
-    padding: 1rem;
-    background: #35424a;
-    color: #ffffff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 2rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
 }
